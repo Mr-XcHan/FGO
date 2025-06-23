@@ -2,7 +2,7 @@
 model_name_or_path: Qwen/Qwen2.5-Math-1.5B-Instruct
 model_revision: main
 torch_dtype: bfloat16
-# attn_implementation: flash_attention_2
+attn_implementation: flash_attention_2
 
 # Original data training arguments
 # dataset_name: open-r1/OpenR1-Math-220k
@@ -19,7 +19,7 @@ system_prompt: "You are a helpful assistant. You should think step-by-step and p
 beta: 0.0
 bf16: true
 use_vllm: false
-gradient_accumulation_steps: 1
+gradient_accumulation_steps: 4
 max_grad_norm: 1.0
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
@@ -35,9 +35,9 @@ logging_strategy: steps
 lr_scheduler_type: cosine
 max_prompt_length: 768
 max_completion_length: 2048
-max_steps: 800
+# max_steps: 800
 num_generations: 8
-# num_train_epochs: 1
+num_train_epochs: 1
 output_dir: /mnt/beegfs/home/han/offline_rl/code/GPG/open-r1/output_logs/CEWE/GRPO/Qwen2.5-Math-1.5B-Instruct
 overwrite_output_dir: true
 per_device_eval_batch_size: 8
@@ -49,9 +49,9 @@ reward_funcs:
 - cewe
 reward_weights:
 - 1.0
-save_strategy: "steps"
-save_steps: 800    
-save_total_limit: 8
+save_strategy: "epoch"
+# save_steps: 2000    
+save_total_limit: 1
 seed: 42
 do_eval: false
 warmup_ratio: 0.1
