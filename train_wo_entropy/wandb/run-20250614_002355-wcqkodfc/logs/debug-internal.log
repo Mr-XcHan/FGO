@@ -1,0 +1,15 @@
+{"time":"2025-06-14T00:23:55.492787001+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/mnt/beegfs/projects/offline_rl/code/GPG/open-r1/train_wo_entropy/wandb/run-20250614_002355-wcqkodfc/logs/debug-core.log"}
+{"time":"2025-06-14T00:23:55.910398458+02:00","level":"INFO","msg":"created new stream","id":"wcqkodfc"}
+{"time":"2025-06-14T00:23:55.910902211+02:00","level":"INFO","msg":"stream: started","id":"wcqkodfc"}
+{"time":"2025-06-14T00:23:55.910939738+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"wcqkodfc"}
+{"time":"2025-06-14T00:23:55.910966918+02:00","level":"INFO","msg":"sender: started","stream_id":"wcqkodfc"}
+{"time":"2025-06-14T00:23:55.910995197+02:00","level":"INFO","msg":"handler: started","stream_id":"wcqkodfc"}
+{"time":"2025-06-14T00:23:56.329017165+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-14T23:38:32.892768934+02:00","level":"INFO","msg":"stream: closing","id":"wcqkodfc"}
+{"time":"2025-06-14T23:38:32.892872164+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-14T23:38:32.915948201+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-14T23:38:34.391876449+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-14T23:38:34.565382217+02:00","level":"INFO","msg":"handler: closed","stream_id":"wcqkodfc"}
+{"time":"2025-06-14T23:38:34.565470141+02:00","level":"INFO","msg":"sender: closed","stream_id":"wcqkodfc"}
+{"time":"2025-06-14T23:38:34.565455827+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"wcqkodfc"}
+{"time":"2025-06-14T23:38:34.566813148+02:00","level":"INFO","msg":"stream: closed","id":"wcqkodfc"}

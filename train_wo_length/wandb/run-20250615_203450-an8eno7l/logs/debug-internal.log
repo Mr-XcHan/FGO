@@ -1,0 +1,15 @@
+{"time":"2025-06-15T20:34:50.434428554+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/mnt/beegfs/projects/offline_rl/code/GPG/open-r1/train_wo_length/wandb/run-20250615_203450-an8eno7l/logs/debug-core.log"}
+{"time":"2025-06-15T20:34:50.996124748+02:00","level":"INFO","msg":"created new stream","id":"an8eno7l"}
+{"time":"2025-06-15T20:34:50.996669765+02:00","level":"INFO","msg":"stream: started","id":"an8eno7l"}
+{"time":"2025-06-15T20:34:50.99669192+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"an8eno7l"}
+{"time":"2025-06-15T20:34:50.996735909+02:00","level":"INFO","msg":"handler: started","stream_id":"an8eno7l"}
+{"time":"2025-06-15T20:34:50.99674579+02:00","level":"INFO","msg":"sender: started","stream_id":"an8eno7l"}
+{"time":"2025-06-15T20:34:51.19332938+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-16T10:36:51.754571924+02:00","level":"INFO","msg":"stream: closing","id":"an8eno7l"}
+{"time":"2025-06-16T10:36:51.754681847+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-16T10:36:51.762924831+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-16T10:36:53.628512799+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-16T10:36:53.816460325+02:00","level":"INFO","msg":"handler: closed","stream_id":"an8eno7l"}
+{"time":"2025-06-16T10:36:53.816536671+02:00","level":"INFO","msg":"sender: closed","stream_id":"an8eno7l"}
+{"time":"2025-06-16T10:36:53.816523423+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"an8eno7l"}
+{"time":"2025-06-16T10:36:53.817984455+02:00","level":"INFO","msg":"stream: closed","id":"an8eno7l"}

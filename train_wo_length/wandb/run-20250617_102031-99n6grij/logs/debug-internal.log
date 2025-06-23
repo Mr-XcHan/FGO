@@ -1,0 +1,7 @@
+{"time":"2025-06-17T10:20:32.02777241+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/mnt/beegfs/projects/offline_rl/code/GPG/open-r1/train_wo_length/wandb/run-20250617_102031-99n6grij/logs/debug-core.log"}
+{"time":"2025-06-17T10:20:32.315371548+02:00","level":"INFO","msg":"created new stream","id":"99n6grij"}
+{"time":"2025-06-17T10:20:32.31591161+02:00","level":"INFO","msg":"stream: started","id":"99n6grij"}
+{"time":"2025-06-17T10:20:32.315951614+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"99n6grij"}
+{"time":"2025-06-17T10:20:32.315958371+02:00","level":"INFO","msg":"sender: started","stream_id":"99n6grij"}
+{"time":"2025-06-17T10:20:32.316000615+02:00","level":"INFO","msg":"handler: started","stream_id":"99n6grij"}
+{"time":"2025-06-17T10:20:32.545467867+02:00","level":"INFO","msg":"Starting system monitor"}

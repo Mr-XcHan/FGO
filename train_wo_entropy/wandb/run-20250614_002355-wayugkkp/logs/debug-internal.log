@@ -1,0 +1,15 @@
+{"time":"2025-06-14T00:23:55.50552964+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/mnt/beegfs/projects/offline_rl/code/GPG/open-r1/train_wo_entropy/wandb/run-20250614_002355-wayugkkp/logs/debug-core.log"}
+{"time":"2025-06-14T00:23:55.911501695+02:00","level":"INFO","msg":"created new stream","id":"wayugkkp"}
+{"time":"2025-06-14T00:23:55.912178745+02:00","level":"INFO","msg":"stream: started","id":"wayugkkp"}
+{"time":"2025-06-14T00:23:55.912200546+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"wayugkkp"}
+{"time":"2025-06-14T00:23:55.912228581+02:00","level":"INFO","msg":"sender: started","stream_id":"wayugkkp"}
+{"time":"2025-06-14T00:23:55.912253004+02:00","level":"INFO","msg":"handler: started","stream_id":"wayugkkp"}
+{"time":"2025-06-14T00:23:56.241029358+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-14T23:38:33.235656474+02:00","level":"INFO","msg":"stream: closing","id":"wayugkkp"}
+{"time":"2025-06-14T23:38:33.235757647+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-14T23:38:33.244817769+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-14T23:38:34.702258501+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-14T23:38:34.888911426+02:00","level":"INFO","msg":"handler: closed","stream_id":"wayugkkp"}
+{"time":"2025-06-14T23:38:34.888973426+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"wayugkkp"}
+{"time":"2025-06-14T23:38:34.888995776+02:00","level":"INFO","msg":"sender: closed","stream_id":"wayugkkp"}
+{"time":"2025-06-14T23:38:34.890639614+02:00","level":"INFO","msg":"stream: closed","id":"wayugkkp"}

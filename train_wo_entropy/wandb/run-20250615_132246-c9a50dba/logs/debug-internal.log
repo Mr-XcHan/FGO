@@ -1,0 +1,15 @@
+{"time":"2025-06-15T13:22:46.491890535+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/mnt/beegfs/projects/offline_rl/code/GPG/open-r1/train_wo_entropy/wandb/run-20250615_132246-c9a50dba/logs/debug-core.log"}
+{"time":"2025-06-15T13:22:46.762371165+02:00","level":"INFO","msg":"created new stream","id":"c9a50dba"}
+{"time":"2025-06-15T13:22:46.763090654+02:00","level":"INFO","msg":"stream: started","id":"c9a50dba"}
+{"time":"2025-06-15T13:22:46.763154131+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"c9a50dba"}
+{"time":"2025-06-15T13:22:46.763173521+02:00","level":"INFO","msg":"sender: started","stream_id":"c9a50dba"}
+{"time":"2025-06-15T13:22:46.763176045+02:00","level":"INFO","msg":"handler: started","stream_id":"c9a50dba"}
+{"time":"2025-06-15T13:22:46.988903675+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-15T20:34:08.928831698+02:00","level":"INFO","msg":"stream: closing","id":"c9a50dba"}
+{"time":"2025-06-15T20:34:08.928933912+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-15T20:34:08.95972916+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-15T20:34:10.294288596+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-15T20:34:10.564236589+02:00","level":"INFO","msg":"handler: closed","stream_id":"c9a50dba"}
+{"time":"2025-06-15T20:34:10.564336996+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"c9a50dba"}
+{"time":"2025-06-15T20:34:10.564356346+02:00","level":"INFO","msg":"sender: closed","stream_id":"c9a50dba"}
+{"time":"2025-06-15T20:34:10.565448037+02:00","level":"INFO","msg":"stream: closed","id":"c9a50dba"}

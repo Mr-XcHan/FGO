@@ -1,0 +1,5 @@
+2025-06-12 23:47:20 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1 distributed training: True, 16-bits training: False
+Map: 100%|██████████| 800/800 [00:00<00:00, 4051.77 examples/s]
+[WARNING|logging.py:329] 2025-06-12 23:47:41,642 >> Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+[WARNING|logging.py:329] 2025-06-12 23:47:57,267 >> `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+[WARNING|logging.py:329] 2025-06-12 23:47:57,530 >> DynamicCache + torch.export is tested on torch 2.6.0+ and may not work on earlier versions.
