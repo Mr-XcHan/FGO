@@ -1,11 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=ZR_CEWE
-#SBATCH --nodes=1                        # ⬅️ 使用两个节点
-#SBATCH --nodelist=n1
-#SBATCH --gres=gpu:2                    # ⬅️ 每节点申请2个GPU
+#SBATCH --partition=a100
+#SBATCH --nodes=1                       
+#SBATCH --gres=gpu:2                   # ⬅️ 每节点申请2个GPU
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=0
 #SBATCH --time=48:00:00
 #SBATCH --output=/mnt/beegfs/home/han/offline_rl/code/GPG/open-r1/logs/ZR1_CEWE_%j_%t.out
 
@@ -17,7 +15,7 @@ conda activate GPG
 export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
 export MASTER_PORT=$((29500 + RANDOM % 1000))
 export RANK=$SLURM_NODEID
-export NUM_GPUS_PER_NODE=2
+export NUM_GPUS_PER_NODE=4
 export WORLD_SIZE=$SLURM_NNODES          
 export GPUS=$((WORLD_SIZE * NUM_GPUS_PER_NODE))
 
@@ -40,5 +38,5 @@ accelerate launch \
   --main_process_ip $MASTER_ADDR \
   --main_process_port $MASTER_PORT \
   src/open_r1/grpo.py \
-  --config /mnt/beegfs/home/han/offline_rl/code/GPG/open-r1/recipes/ZR1-1.5B/grpo/config_demo.yaml \
-  --output_dir /mnt/beegfs/home/han/offline_rl/code/GPG/open-r1/output_logs/CEWE/GRPO/ZR1-1.5B \
+  --config /vol/research/ly0008/xch/code/CEWE_/recipes/ZR1-1.5B/grpo/config_demo.yaml \
+  --output_dir /vol/research/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/ZR1-1.5B \
