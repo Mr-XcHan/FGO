@@ -37,7 +37,7 @@ accelerate launch \
   --num_processes $GPUS \
   --main_process_ip $MASTER_ADDR \
   --main_process_port $MASTER_PORT \
-  src/open_r1/grpo.py \
+  /vol/research/ly0008/xch/code/CEWE_/src/open_r1/grpo.py \
   --config /vol/research/ly0008/xch/code/CEWE_/recipes/Qwen2.5-Math-1.5B/grpo/config_demo.yaml \
   --output_dir /vol/research/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/Qwen2.5-Math-1.5B \
 
