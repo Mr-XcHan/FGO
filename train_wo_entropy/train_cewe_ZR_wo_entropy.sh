@@ -1,17 +1,15 @@
 #!/bin/bash
 #SBATCH --job-name=ZR_w/oE
-#SBATCH --nodes=1                        # ⬅️ 使用两个节点
-#SBATCH --nodelist=n3
-#SBATCH --gres=gpu:2                    # ⬅️ 每节点申请2个GPU
+#SBATCH --partition=a100
+#SBATCH --nodes=1                       
+#SBATCH --gres=gpu:2                   # ⬅️ 每节点申请2个GPU
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=0
 #SBATCH --time=48:00:00
-#SBATCH --output=/mnt/beegfs/home/han/offline_rl/code/GPG/open-r1/logs/ZR1_wo_Entropy_%j_%t.out
+#SBATCH --output=/vol/research/ly0008/xch/code/CEWE_/logs/ZR1_wo_Entropy_%j_%t.out
 
 # ✅ 1. 激活你的 Conda 环境
 source ~/.bashrc
-conda activate GPG
+conda activate /vol/research/ly0008/xch/envs/GPG
 
 # ✅ 2. 分布式训练相关环境变量（自动设置）
 export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
@@ -33,12 +31,12 @@ export PYTHONPATH=src
 
 # ✅ 4. 启动训练
 accelerate launch \
-  --config_file /mnt/beegfs/home/han/offline_rl/code/GPG/open-r1/recipes/accelerate_configs/zero2.yaml \
+  --config_file /vol/research/ly0008/xch/code/CEWE_/recipes/accelerate_configs/zero2.yaml \
   --num_machines $WORLD_SIZE \
   --machine_rank $RANK \
   --num_processes $GPUS \
   --main_process_ip $MASTER_ADDR \
   --main_process_port $MASTER_PORT \
-  /mnt/beegfs/home/han/offline_rl/code/GPG/open-r1/src/open_r1/grpo_wo_entropy.py \
-  --config /mnt/beegfs/home/han/offline_rl/code/GPG/open-r1/recipes/ZR1-1.5B/grpo/config_demo.yaml \
-  --output_dir /mnt/beegfs/home/han/offline_rl/code/GPG/open-r1/output_logs/CEWE/GRPO/ZR1-1.5B_wo_Entropy \
+  /vol/research/ly0008/xch/code/CEWE_/src/open_r1/grpo_wo_entropy.py \
+  --config /vol/research/ly0008/xch/code/CEWE_/recipes/ZR1-1.5B/grpo/config_demo.yaml \
+  --output_dir /vol/research/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/ZR1-1.5B_wo_Entropy \

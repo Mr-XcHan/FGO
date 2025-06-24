@@ -29,7 +29,7 @@ log_level: info
 logging_first_step: true
 logging_steps: 1
 logging_strategy: steps
-lr_scheduler_type: cosine_with_min_lr
+lr_scheduler_type: cosine
 lr_scheduler_kwargs:
   min_lr_rate: 0.1
 max_prompt_length: 768
@@ -53,5 +53,4 @@ save_strategy: "epoch"
 save_total_limit: 1
 seed: 42
 do_eval: false
-
 warmup_ratio: 0.1
