@@ -1,6 +1,5 @@
 #!/bin/bash
 #SBATCH --job-name=DPSK_CEWE
-#SBATCH --nodes=1                        # ⬅️ 使用两个节点
 #SBATCH --partition=a100
 #SBATCH --nodes=1                       
 #SBATCH --gres=gpu:2                   # ⬅️ 每节点申请2个GPU
