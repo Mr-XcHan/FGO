@@ -94,7 +94,7 @@ def main(script_args, training_args, model_args):
 
     else:
         # this is for mathlighteval
-        dataset = load_dataset(script_args.dataset_name, name=script_args.dataset_config)['train'].select(range(training_args.max_steps))
+        dataset = load_dataset(script_args.dataset_name, name=script_args.dataset_config)['train']
         dataset = dataset.map(lambda x:x, remove_columns=['level', 'type'])
 
     # Load the dataset
