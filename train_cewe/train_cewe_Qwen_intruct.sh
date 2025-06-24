@@ -31,7 +31,7 @@ export PYTHONPATH=src
 
 # ✅ 4. 启动训练
 accelerate launch \
-  --config_file recipes/accelerate_configs/zero2.yaml \
+  --config_file /vol/research/ly0008/xch/code/CEWE_/recipes/accelerate_configs/zero2.yaml \
   --num_machines $WORLD_SIZE \
   --machine_rank $RANK \
   --num_processes $GPUS \
