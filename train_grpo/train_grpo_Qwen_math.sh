@@ -1,6 +1,5 @@
 #!/bin/bash
 #SBATCH --job-name=Qwen_GRPO
-#SBATCH --nodes=1                        # ⬅️ 使用两个节点
 #SBATCH --partition=a100
 #SBATCH --nodes=1                       
 #SBATCH --gres=gpu:2                   # ⬅️ 每节点申请2个GPU
@@ -32,12 +31,12 @@ export PYTHONPATH=src
 
 # ✅ 4. 启动训练
 accelerate launch \
-  --config_file recipes/accelerate_configs/zero2.yaml \
+  --config_file /vol/research/ly0008/xch/code/CEWE_/recipes/accelerate_configs/zero2.yaml \
   --num_machines $WORLD_SIZE \
   --machine_rank $RANK \
   --num_processes $GPUS \
   --main_process_ip $MASTER_ADDR \
   --main_process_port $MASTER_PORT \
   src/open_r1/grpo_pure.py \
-  --config /mnt/beegfs/home/han/offline_rl/code/GPG/open-r1/recipes/Qwen2.5-Math-1.5B/grpo/config_demo.yaml \
-  --output_dir /mnt/beegfs/home/han/offline_rl/code/GPG/open-r1/output_logs/CEWE/GRPO/Qwen2.5-Math-1.5B_pure \
+  --config /vol/research/ly0008/xch/code/CEWE_/recipes/Qwen2.5-Math-1.5B/grpo/config_demo.yaml \
+  --output_dir /vol/research/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/Qwen2.5-Math-1.5B_pure \
