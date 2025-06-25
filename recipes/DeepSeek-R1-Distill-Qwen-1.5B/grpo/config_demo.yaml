@@ -30,8 +30,6 @@ logging_first_step: true
 logging_steps: 1
 logging_strategy: steps
 lr_scheduler_type: cosine
-lr_scheduler_kwargs:
-  min_lr_rate: 0.1
 max_prompt_length: 768
 max_completion_length: 2048
 # max_steps: 800

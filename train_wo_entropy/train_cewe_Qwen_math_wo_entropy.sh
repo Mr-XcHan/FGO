@@ -9,7 +9,7 @@
 
 # ✅ 1. 激活你的 Conda 环境
 source ~/.bashrc
-conda activate /vol/research/ly0008/xch/envs/GPG
+conda activate GPG
 
 # ✅ 2. 分布式训练相关环境变量（自动设置）
 export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
@@ -27,7 +27,8 @@ nvidia-smi
 
 
 # ✅ 3. 设置 python 包路径（如有必要）
-export PYTHONPATH=src
+export PYTHONPATH=/mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/src:$PYTHONPATH
+
 
 # ✅ 4. 启动训练
 accelerate launch \

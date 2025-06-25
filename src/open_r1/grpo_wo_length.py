@@ -45,7 +45,9 @@ def main(script_args, training_args, model_args):
     set_seed(training_args.seed)
 
     project_name = "cewe_" + model_args.model_name_or_path.replace("/", "_")
-    wandb.init(project=project_name, name="without_length_GRPO_" + timestr)
+    os.environ["WANDB_API_KEY"] = "d66e6e4ad781cbc9f6087202c24e38887024cfe7"
+    wandb.login()
+    wandb.init(project=project_name, name="GRPO_" + timestr)
 
     ###############
     # Setup logging
