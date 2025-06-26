@@ -2,7 +2,7 @@
 #SBATCH --job-name=Qwen_CEWE
 #SBATCH --partition=a100
 #SBATCH --nodes=1                       
-#SBATCH --gres=gpu:2                   
+#SBATCH --gres=gpu:1                   
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=48:00:00
 #SBATCH --output=/vol/research/ly0008/xch/code/CEWE_/logs/Qwen_CEWE_%j_%t.out

@@ -2,7 +2,7 @@
 model_name_or_path: Qwen/Qwen2.5-Math-1.5B
 model_revision: main
 torch_dtype: bfloat16
-attn_implementation: flash_attention_2
+# attn_implementation: flash_attention_2
 
 # Original data training arguments
 # dataset_name: open-r1/OpenR1-Math-220k
@@ -41,7 +41,7 @@ num_generations: 8
 output_dir: /vol/research/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/Qwen2.5-Math-1.5B
 overwrite_output_dir: true
 per_device_eval_batch_size: 8
-per_device_train_batch_size: 8
+per_device_train_batch_size: 16
 push_to_hub: false
 report_to:
 - wandb
