@@ -19,7 +19,7 @@ conda activate GPG
 export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
 export MASTER_PORT=$((29500 + RANDOM % 1000))
 export RANK=$SLURM_NODEID
-export NUM_GPUS_PER_NODE=2
+export NUM_GPUS_PER_NODE=1
 export WORLD_SIZE=$SLURM_NNODES
 export GPUS=$((WORLD_SIZE * NUM_GPUS_PER_NODE))
 
