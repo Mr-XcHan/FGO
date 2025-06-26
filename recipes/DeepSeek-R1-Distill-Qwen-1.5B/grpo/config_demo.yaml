@@ -38,7 +38,7 @@ num_generations: 8
 output_dir: /mnt/beegfs/home/han/offline_rl/code/GPG/open-r1/output_logs/CEWE/GRPO/DeepSeek-R1-Distill-Qwen-1.5B
 overwrite_output_dir: true
 per_device_eval_batch_size: 8
-per_device_train_batch_size: 16
+per_device_train_batch_size: 8
 push_to_hub: false
 report_to:
 - wandb
