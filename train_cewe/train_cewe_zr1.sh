@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:1                   # ⬅️ 每节点申请2个GPU
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=48:00:00
-#SBATCH --output=/mnt/beegfs/home/han/offline_rl/code/GPG/open-r1/logs/ZR1_CEWE_%j_%t.out
+#SBATCH --output=/mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/logs/ZR1_CEWE_%j_%t.out
 
 # ✅ 1. 激活你的 Conda 环境
 source ~/.bashrc
