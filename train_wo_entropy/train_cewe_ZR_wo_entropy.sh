@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:1                   # ⬅️ 每节点申请2个GPU
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=48:00:00
-#SBATCH --output=/vol/research/ly0008/xch/code/CEWE_/logs/ZR1_wo_Entropy_%j_%t.out
+#SBATCH --output=/mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/logs/ZR1_wo_Entropy_%j_%t.out
 
 # ✅ 1. 激活你的 Conda 环境
 source ~/.bashrc
@@ -32,12 +32,12 @@ export PYTHONPATH=/mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/src:$PY
 
 # ✅ 4. 启动训练
 accelerate launch \
-  --config_file /vol/research/ly0008/xch/code/CEWE_/recipes/accelerate_configs/zero2.yaml \
+  --config_file /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/recipes/accelerate_configs/zero2.yaml \
   --num_machines $WORLD_SIZE \
   --machine_rank $RANK \
   --num_processes $GPUS \
   --main_process_ip $MASTER_ADDR \
   --main_process_port $MASTER_PORT \
-  /vol/research/ly0008/xch/code/CEWE_/src/open_r1/grpo_wo_entropy.py \
-  --config /vol/research/ly0008/xch/code/CEWE_/recipes/ZR1-1.5B/grpo/config_demo.yaml \
-  --output_dir /vol/research/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/ZR1-1.5B_wo_Entropy \
+  /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/src/open_r1/grpo_wo_entropy.py \
+  --config /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/recipes/ZR1-1.5B/grpo/config_demo.yaml \
+  --output_dir /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/ZR1-1.5B_wo_Entropy \
