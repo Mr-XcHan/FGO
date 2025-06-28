@@ -46,8 +46,8 @@ reward_funcs:
 - cewe
 reward_weights:
 - 1.0
-save_strategy: "epoch"
-# save_steps: 2000    
+# save_strategy: "epoch"
+save_steps: 200    
 save_total_limit: 1
 seed: 42
 do_eval: false
