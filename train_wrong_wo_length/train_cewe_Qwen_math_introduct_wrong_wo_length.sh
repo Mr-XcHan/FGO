@@ -2,10 +2,10 @@
 #SBATCH --job-name=Qwen_Ins_wrong_w/o
 #SBATCH --partition=a100
 #SBATCH --nodes=1                       
-#SBATCH --gres=gpu:1                  # ⬅️ 每节点申请2个GPU
+#SBATCH --gres=gpu:2                  # ⬅️ 每节点申请2个GPU
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=48:00:00
-#SBATCH --output=/vol/research/ly0008/xch/code/CEWE_/logs/Qwen_Ins_wrong_wo_Length_%j_%t.out
+#SBATCH --output=/mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/logs/Qwen_Ins_wrong_wo_Length_%j_%t.out
 
 # ✅ 1. 激活你的 Conda 环境
 source ~/.bashrc
@@ -32,12 +32,12 @@ export PYTHONPATH=/mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/src:$PY
 
 # ✅ 4. 启动训练
 accelerate launch \
-  --config_file /vol/research/ly0008/xch/code/CEWE_/recipes/accelerate_configs/zero2.yaml \
+  --config_file /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/recipes/accelerate_configs/zero2.yaml \
   --num_machines $WORLD_SIZE \
   --machine_rank $RANK \
   --num_processes $GPUS \
   --main_process_ip $MASTER_ADDR \
   --main_process_port $MASTER_PORT \
-  /vol/research/ly0008/xch/code/CEWE_/src/open_r1/grpo_wrongwolength.py \
-  --config /vol/research/ly0008/xch/code/CEWE_/recipes/Qwen2.5-1.5B-Instruct/grpo/config_demo.yaml \
-  --output_dir /vol/research/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/Qwen2.5-Math-1.5B-Instruct_wrong_wo_Length \
+  /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/src/open_r1/grpo_wrongwolength.py \
+  --config /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/recipes/Qwen2.5-1.5B-Instruct/grpo/config_demo.yaml \
+  --output_dir /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/Qwen2.5-Math-1.5B-Instruct_wrong_wo_Length \
