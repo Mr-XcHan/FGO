@@ -31,13 +31,13 @@ export PYTHONPATH=/mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/src:$PY
 
 # ✅ 4. 启动训练
 accelerate launch \
-  --config_file /vol/research/ly0008/xch/code/CEWE_/recipes/accelerate_configs/zero2.yaml \
+  --config_file /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/recipes/accelerate_configs/zero2.yaml \
   --num_machines $WORLD_SIZE \
   --machine_rank $RANK \
   --num_processes $GPUS \
   --main_process_ip $MASTER_ADDR \
   --main_process_port $MASTER_PORT \
-  /vol/research/ly0008/xch/code/CEWE_/src/open_r1/grpo.py \
-  --config /vol/research/ly0008/xch/code/CEWE_/recipes/Qwen2.5-Math-1.5B/grpo/config_demo.yaml \
-  --output_dir /vol/research/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/Qwen2.5-Math-1.5B \
+  /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/src/open_r1/grpo.py \
+  --config /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/recipes/Qwen2.5-Math-1.5B/grpo/config_demo.yaml \
+  --output_dir /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/Qwen2.5-Math-1.5B \
 
