@@ -2,7 +2,7 @@
 #SBATCH --job-name=ZR_w/oE
 #SBATCH --partition=a100
 #SBATCH --nodes=1                       
-#SBATCH --gres=gpu:1                   # ⬅️ 每节点申请2个GPU
+#SBATCH --gres=gpu:2                   # ⬅️ 每节点申请2个GPU
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=48:00:00
 #SBATCH --output=/mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/logs/ZR1_wo_Entropy_%j_%t.out
@@ -15,7 +15,7 @@ conda activate GPG
 export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
 export MASTER_PORT=$((29500 + RANDOM % 1000))
 export RANK=$SLURM_NODEID
-export NUM_GPUS_PER_NODE=1
+export NUM_GPUS_PER_NODE=2
 export WORLD_SIZE=$SLURM_NNODES          
 export GPUS=$((WORLD_SIZE * NUM_GPUS_PER_NODE))
 
