@@ -206,6 +206,7 @@ def main(script_args, training_args, model_args):
     
     logger.info("*** Train ***")
     checkpoint = get_latest_checkpoint(training_args.output_dir)
+    print("checkpoint:", checkpoint)
     # if training_args.resume_from_checkpoint is not None:
     #     checkpoint = training_args.resume_from_checkpoint
     # elif last_checkpoint is not None:
