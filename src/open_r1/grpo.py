@@ -202,7 +202,7 @@ def main(script_args, training_args, model_args):
             return None
         # 提取步数并排序
         checkpoints = sorted(checkpoints, key=lambda x: int(x.split("-")[-1]))
-    return checkpoints[-1]  # 返回最后一个 checkpoint
+        return checkpoints[-1]  # 返回最后一个 checkpoint
     
     logger.info("*** Train ***")
     checkpoint = get_latest_checkpoint(training_args.output_dir)
