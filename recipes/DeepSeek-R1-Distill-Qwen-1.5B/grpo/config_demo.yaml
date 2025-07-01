@@ -15,7 +15,8 @@ system_prompt: "You are a helpful assistant. You should think step-by-step and p
 # GRPO trainer config
 beta: 0.0
 bf16: true
-use_vllm: false
+vllm_device: auto
+vllm_gpu_memory_utilization: 0.7
 do_eval: false
 gradient_accumulation_steps: 4
 gradient_checkpointing: true
