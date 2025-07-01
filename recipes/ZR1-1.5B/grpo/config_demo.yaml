@@ -2,7 +2,7 @@
 model_name_or_path: Zyphra/ZR1-1.5B
 model_revision: main
 torch_dtype: bfloat16
-# attn_implementation: flash_attention_2
+attn_implementation: flash_attention_2
 
 # Original data training arguments
 # dataset_name: open-r1/OpenR1-Math-220k
@@ -18,7 +18,8 @@ system_prompt: "You are a helpful assistant. You should think step-by-step and p
 # GRPO trainer config
 beta: 0.0
 bf16: true
-use_vllm: false
+vllm_device: auto
+vllm_gpu_memory_utilization: 0.7
 gradient_accumulation_steps: 4
 max_grad_norm: 1.0
 gradient_checkpointing: true
@@ -50,7 +51,7 @@ reward_funcs:
 reward_weights:
 - 1.0
 # save_strategy: "epoch"
-save_steps: 200    
+save_steps: 100    
 save_total_limit: 1
 seed: 42
 do_eval: false
