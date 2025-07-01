@@ -191,12 +191,26 @@ def main(script_args, training_args, model_args):
     ###############
     # Training loop
     ###############
+    def get_latest_checkpoint(output_dir):
+    # 找到所有名为 checkpoint-* 的子目录
+    checkpoints = [
+        os.path.join(output_dir, d)
+        for d in os.listdir(output_dir)
+        if re.match(r"checkpoint-\d+", d)
+    ]
+    if not checkpoints:
+        return None
+    # 提取步数并排序
+    checkpoints = sorted(checkpoints, key=lambda x: int(x.split("-")[-1]))
+    return checkpoints[-1]  # 返回最后一个 checkpoint
+    
     logger.info("*** Train ***")
-    checkpoint = None
-    if training_args.resume_from_checkpoint is not None:
-        checkpoint = training_args.resume_from_checkpoint
-    elif last_checkpoint is not None:
-        checkpoint = last_checkpoint
+    checkpoint = get_latest_checkpoint(training_args.output_dir)
+    # if training_args.resume_from_checkpoint is not None:
+    #     checkpoint = training_args.resume_from_checkpoint
+    # elif last_checkpoint is not None:
+    #     checkpoint = last_checkpoint
+        
     train_result = trainer.train(resume_from_checkpoint=checkpoint)
     metrics = train_result.metrics
     metrics["train_samples"] = len(dataset[script_args.dataset_train_split])
