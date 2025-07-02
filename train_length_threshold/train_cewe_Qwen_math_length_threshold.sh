@@ -3,7 +3,7 @@
 #SBATCH --partition=a100
 #SBATCH --nodes=1                       
 #SBATCH --gres=gpu:2                   # ⬅️ 每节点申请2个GPU
-#SBATCH --ntasks-per-node=2
+#SBATCH --ntasks-per-node=1
 #SBATCH --time=48:00:00
 #SBATCH --output=/mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/logs/Qwen_LengthThreshold_%j_%t.out
 
