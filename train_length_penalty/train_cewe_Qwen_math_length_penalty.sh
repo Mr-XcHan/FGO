@@ -40,4 +40,4 @@ accelerate launch \
   --main_process_port $MASTER_PORT \
   /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/src/open_r1/grpo_length_penalty.py \
   --config /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/recipes/Qwen2.5-Math-1.5B/grpo/config_demo.yaml \
-  --output_dir /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/Qwen2.5-Math-1.5B_Length_Threshold \
+  --output_dir /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/Qwen2.5-Math-1.5B_Length_Penalty \
