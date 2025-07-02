@@ -192,6 +192,8 @@ def main(script_args, training_args, model_args):
     # Training loop
     ###############
     def get_latest_checkpoint(output_dir):
+        if not os.path.exists(output_dir):
+            return None
         # 找到所有名为 checkpoint-* 的子目录
         checkpoints = [
             os.path.join(output_dir, d)
