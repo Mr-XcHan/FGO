@@ -20,7 +20,7 @@ beta: 0.0
 bf16: true
 vllm_device: auto
 vllm_gpu_memory_utilization: 0.7
-gradient_accumulation_steps: 4
+gradient_accumulation_steps: 2
 max_grad_norm: 1.0
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
