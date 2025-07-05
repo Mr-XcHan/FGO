@@ -27,6 +27,7 @@ gradient_checkpointing_kwargs:
   use_reentrant: false
 hub_model_id: Qwen2.5-1.5B-Open-R1-GRPO
 hub_strategy: every_save
+learning_rate: 2.0e-05
 log_completions: false
 log_level: info
 logging_first_step: true
