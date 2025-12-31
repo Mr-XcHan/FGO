@@ -665,9 +665,9 @@ def cewe(completions, **kwargs):
                 print("entropy_scale:", entropy_scale)
 
                 if reward_element == 1:
-                    weights_raw = (completion_length_scale * entropy_scale) / (lengths_sub * entropys_sub + 1e-6)
+                    weights_raw = 0.5 * (completion_length_scale * entropy_scale) / (lengths_sub * entropys_sub + 1e-6)
                 else:
-                    weights_raw = (lengths_sub * entropy_scale) / (completion_length_scale * entropys_sub + 1e-6)
+                    weights_raw = 0.5 * (lengths_sub * entropy_scale) / (completion_length_scale * entropys_sub + 1e-6)
 
                 # # reward = 0 without scale.
                 # if reward_element == 1:
