@@ -705,7 +705,7 @@ def cewe(completions, **kwargs):
 
         exp_length = torch.exp(length_token.float() / length_token.float().max())
         exp_reward = torch.exp(rewards_tensor.float())
-        rewards_tensor = exp_reward - 0.1 * exp_length
+        rewards_tensor = exp_reward - 0.5 * exp_length
 
         print("exp_length:", exp_length)
         print("exp_reward:", exp_reward)
