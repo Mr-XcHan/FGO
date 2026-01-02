@@ -681,7 +681,7 @@ def cewe(completions, **kwargs):
                 #     weights_raw = completion_length_scale / (entropys_sub * lengths_sub + 1e-6)
                 # else:
                 #     weights_raw = lengths_sub / (entropys_sub + 1e-6)
-
+                weights_raw = (len_factor ** alpha) * ent_factor
                 weights_exp = torch.exp((weights_raw - weights_raw.max()))
                 weights_sub = weights_exp / weights_exp.sum()
 
