@@ -660,15 +660,16 @@ def cewe(completions, **kwargs):
                 lengths_sub = length_token[idx]
 
                 completion_length_scale = lengths_sub.float().mean()
-                lengths_sub = 0.5 * lengths_sub
                 entropy_scale = entropys_sub.float().mean()
                 print("completion_length_scale:", completion_length_scale)
                 print("entropy_scale:", entropy_scale)
 
                 if reward_element == 1:
-                    weights_raw = (completion_length_scale * entropy_scale) / (lengths_sub * entropys_sub + 1e-6)
+                    len_factor = completion_length_scale / (lengths_sub + 1e-6)
+                    ent_factor = entropy_scale / (entropys_sub + 1e-6)
                 else:
-                    weights_raw = (lengths_sub * entropy_scale) / (completion_length_scale * entropys_sub + 1e-6)
+                    len_factor = lengths_sub / (completion_length_scale + 1e-6)
+                    ent_factor = entropy_scale / (entropys_sub + 1e-6)
 
                 # # reward = 0 without scale.
                 # if reward_element == 1:
