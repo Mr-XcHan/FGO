@@ -26,14 +26,14 @@ Adjust paths and configs for your setup:
 accelerate launch \
   --config_file recipes/accelerate_configs/zero2.yaml \
   src/open_r1/grpo.py \
-  --config recipes/Qwen2.5-1.5B-Instruct/grpo/config_demo.yaml \
+  --config recipes/Qwen2.5-1.5B-Math/grpo/config_demo.yaml \
   --output_dir outputs/grpo_demo
 ```
 
 **SLURM Training**
 Templates are provided; update absolute paths to match your environment:
 ```bash
-sbatch train_fgo/train_grpo_Qwen_instruct.sh
+sbatch train_fgo/train_grpo_Qwen_math.sh
 ```
 
 
