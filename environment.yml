@@ -1,4 +1,4 @@
-name: GPG
+name: FGO
 channels:
   - conda-forge
   - defaults
@@ -274,4 +274,4 @@ dependencies:
       - xgrammar==0.1.19
       - xxhash==3.5.0
       - yarl==1.20.0
-prefix: /mnt/beegfs/home/han/anaconda3/envs/GPG
+prefix: /mnt/beegfs/home/han/anaconda3/envs/FGO

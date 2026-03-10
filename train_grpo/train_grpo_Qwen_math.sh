@@ -5,11 +5,11 @@
 #SBATCH --gres=gpu:2                   # ⬅️ 每节点申请2个GPU
 #SBATCH --ntasks-per-node=1
 #SBATCH --time=48:00:00
-#SBATCH --output=/mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/logs/Qwen_GRPO_%j_%t.out
+#SBATCH --output=FGO/logs/Qwen_GRPO_%j_%t.out
 
 # ✅ 1. 激活你的 Conda 环境
 source ~/.bashrc
-conda activate GPG
+conda activate FGO
 
 # ✅ 2. 分布式训练相关环境变量（自动设置）
 export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
@@ -27,16 +27,16 @@ nvidia-smi
 
 
 # ✅ 3. 设置 python 包路径（如有必要）
-export PYTHONPATH=/mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/src:$PYTHONPATH
+export PYTHONPATH=FGO/src:$PYTHONPATH
 
 # ✅ 4. 启动训练
 accelerate launch \
-  --config_file /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/recipes/accelerate_configs/zero2.yaml \
+  --config_file FGO/recipes/accelerate_configs/zero2.yaml \
   --num_machines $WORLD_SIZE \
   --machine_rank $RANK \
   --num_processes $GPUS \
   --main_process_ip $MASTER_ADDR \
   --main_process_port $MASTER_PORT \
-  /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/src/open_r1/grpo_pure.py \
-  --config /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/recipes/Qwen2.5-Math-1.5B/grpo/config_demo.yaml \
-  --output_dir /mnt/fast/nobackup/scratch4weeks/ly0008/xch/code/CEWE_/output_logs/CEWE/GRPO/Qwen2.5-Math-1.5B_pure \
+  FGO/src/open_r1/grpo_pure.py \
+  --config FGO/recipes/Qwen2.5-Math-1.5B/grpo/config_demo.yaml \
+  --output_dir FGO/output_logs/CEWE/GRPO/Qwen2.5-Math-1.5B_pure \
