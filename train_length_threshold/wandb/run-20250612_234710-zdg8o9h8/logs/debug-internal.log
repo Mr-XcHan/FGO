@@ -1,7 +1,0 @@
-{"time":"2025-06-12T23:47:10.841567076+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.11","symlink path":"/mnt/beegfs/projects/offline_rl/code/GPG/open-r1/train_length_threshold/wandb/run-20250612_234710-zdg8o9h8/logs/debug-core.log"}
-{"time":"2025-06-12T23:47:11.113258392+02:00","level":"INFO","msg":"created new stream","id":"zdg8o9h8"}
-{"time":"2025-06-12T23:47:11.113884342+02:00","level":"INFO","msg":"stream: started","id":"zdg8o9h8"}
-{"time":"2025-06-12T23:47:11.113919269+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"zdg8o9h8"}
-{"time":"2025-06-12T23:47:11.11393438+02:00","level":"INFO","msg":"sender: started","stream_id":"zdg8o9h8"}
-{"time":"2025-06-12T23:47:11.113978988+02:00","level":"INFO","msg":"handler: started","stream_id":"zdg8o9h8"}
-{"time":"2025-06-12T23:47:11.383288441+02:00","level":"INFO","msg":"Starting system monitor"}
