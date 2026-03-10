@@ -1,6 +1,6 @@
-# Project Name (TBD)
+# FGO - Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization
 
-This repository is an implementation of our previous paper: `xxx`.
+This repository is an implementation of paper: `Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization`.
 
 The project builds on Hugging Face Transformers / TRL and focuses on GRPO-style post-training with composable reward functions for math reasoning and structured output formats.
 
