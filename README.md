@@ -1,4 +1,4 @@
-# FGO - Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization
+# Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization
 
 This repository is an implementation of our paper: `Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization`.
 
