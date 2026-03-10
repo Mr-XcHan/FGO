@@ -1,6 +1,6 @@
 # FGO - Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization
 
-This repository is an implementation of paper: `Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization`.
+This repository is an implementation of our paper: `Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization`.
 
 
 **Repository Layout**
@@ -33,7 +33,7 @@ accelerate launch \
 **SLURM Training**
 Templates are provided; update absolute paths to match your environment:
 ```bash
-sbatch train_grpo/train_grpo_Qwen_instruct.sh
+sbatch train_fgo/train_grpo_Qwen_instruct.sh
 ```
 
 
@@ -48,7 +48,15 @@ Custom tasks are defined in `src/open_r1/evaluate.py`. Run evaluation with `ligh
 **Citation**
 If you use this project, please cite our paper:
 ```
-xxx
+@misc{han2026longchainofthoughtcompressionfinegrained,
+      title={Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization}, 
+      author={Xinchen Han and Hossam Afifi and Michel Marot and Xilu Wang and Lu Yin},
+      year={2026},
+      eprint={2602.10048},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2602.10048}, 
+}
 ```
 
 **Notes**
