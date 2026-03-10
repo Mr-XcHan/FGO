@@ -2,14 +2,6 @@
 
 This repository is an implementation of paper: `Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization`.
 
-The project builds on Hugging Face Transformers / TRL and focuses on GRPO-style post-training with composable reward functions for math reasoning and structured output formats.
-
-**Highlights**
-- GRPO training entry points and variants (e.g., `grpo.py`, `grpo_pure.py`, `grpo_wo_entropy.py`, `grpo_wo_length.py`).
-- Composable reward functions (accuracy, format, tag count, length/repetition penalties, code rewards) in `src/open_r1/rewards*.py`.
-- Dataset loading and chat-template formatting in `src/open_r1/grpo*.py` and `src/open_r1/utils/`.
-- Math answer normalization and verification (`src/open_r1/math_normalize.py`, via `math-verify`).
-- SLURM scripts and helpers for training, evaluation, and generation.
 
 **Repository Layout**
 - `src/open_r1/`: core training and evaluation code.
@@ -23,11 +15,10 @@ The project builds on Hugging Face Transformers / TRL and focuses on GRPO-style 
 Use the provided `environment.yml`:
 ```bash
 conda env create -f environment.yml
-conda activate GPG
+conda activate FGO
 export PYTHONPATH=$(pwd)/src:$PYTHONPATH
 ```
 
-Core dependencies include `transformers`, `trl`, `datasets`, `deepspeed`, `accelerate`. Math evaluation uses `math-verify` and `latex2sympy2-extended`. Custom evaluation tasks live in `src/open_r1/evaluate.py` (requires `lighteval`).
 
 **Quick Start (Single Node Example)**
 Adjust paths and configs for your setup:
@@ -45,33 +36,6 @@ Templates are provided; update absolute paths to match your environment:
 sbatch train_grpo/train_grpo_Qwen_instruct.sh
 ```
 
-**Run In Background (CLI Suspend)**
-You can detach training jobs from your terminal using one of the options below.
-
-Option A: `nohup` (simple, no session management)
-```bash
-nohup accelerate launch \
-  --config_file recipes/accelerate_configs/zero2.yaml \
-  src/open_r1/grpo.py \
-  --config recipes/Qwen2.5-1.5B-Instruct/grpo/config_demo.yaml \
-  --output_dir outputs/grpo_demo \
-  > logs/grpo_demo.out 2>&1 &
-```
-
-Option B: `tmux` (recommended for long runs)
-```bash
-tmux new -s grpo_run
-# run your command inside tmux
-accelerate launch ... 
-# detach with Ctrl+b then d
-```
-
-Option C: `screen`
-```bash
-screen -S grpo_run
-accelerate launch ...
-# detach with Ctrl+a then d
-```
 
 **Evaluation**
 Custom tasks are defined in `src/open_r1/evaluate.py`. Run evaluation with `lighteval` per your experiment setup.
