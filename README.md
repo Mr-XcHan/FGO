@@ -6,9 +6,6 @@ This repository is an implementation of our paper: `Long Chain-of-Thought Compre
 
 [![Poster preview](poster.png)](poster.png)
 
-📄 [View full poster PDF](assets/poster.pdf)
-
-
 **1. Repository Layout**
 - `src/open_r1/`: core training and evaluation code.
 - `recipes/`: model and training configs (including `accelerate` configs).
