@@ -45,15 +45,17 @@ sbatch train_fgo/train_grpo_Qwen_math.sh
 **7. Citation**
 If you use this project, please cite our paper:
 ```
-@misc{han2026longchainofthoughtcompressionfinegrained,
-      title={Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization}, 
-      author={Xinchen Han and Hossam Afifi and Michel Marot and Xilu Wang and Lu Yin},
-      year={2026},
-      eprint={2602.10048},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2602.10048}, 
-}
+@INPROCEEDINGS{11464077,
+  author={Han, Xinchen and Afifi, Hossam and Marot, Michel and Wang, Xilu and Yin, Lu},
+  booktitle={ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={Long Chain-Of-Thought Compression via Fine-Grained Group Policy Optimization}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={4471-4475},
+  keywords={Filtering;Filters;Protocols;Communication systems;HTTP;Wide area networks;Wireless communication;Computer networks;Artificial intelligence;Cognitive systems;LLM;CoT Compression;RL;GRPO},
+  doi={10.1109/ICASSP55912.2026.11464077}}
+
 ```
 
 **8. Notes**
