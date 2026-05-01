@@ -53,7 +53,6 @@ If you use this project, please cite our paper:
   volume={},
   number={},
   pages={4471-4475},
-  keywords={Filtering;Filters;Protocols;Communication systems;HTTP;Wide area networks;Wireless communication;Computer networks;Artificial intelligence;Cognitive systems;LLM;CoT Compression;RL;GRPO},
   doi={10.1109/ICASSP55912.2026.11464077}}
 
 ```
