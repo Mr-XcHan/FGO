@@ -2,6 +2,12 @@
 
 This repository is an implementation of our paper: `Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization`.
 
+## Poster
+
+[![Poster preview](assets/poster_preview.png)](assets/poster.pdf)
+
+📄 [View full poster PDF](assets/poster.pdf)
+
 
 **1. Repository Layout**
 - `src/open_r1/`: core training and evaluation code.
