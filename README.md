@@ -2,8 +2,6 @@
 
 This repository is an implementation of our paper: `Long Chain-of-Thought Compression via Fine-Grained Group Policy Optimization`.
 
-## Poster
-
 [![Poster preview](poster.png)](poster.png)
 
 **1. Repository Layout**
