@@ -4,7 +4,7 @@ This repository is an implementation of our paper: `Long Chain-of-Thought Compre
 
 ## Poster
 
-[![Poster preview](assets/poster_preview.png)](assets/poster.pdf)
+[![Poster preview](poster.png)](poster.png)
 
 📄 [View full poster PDF](assets/poster.pdf)
 
